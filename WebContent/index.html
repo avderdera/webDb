@@ -1,0 +1,48 @@
+
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Product DataBase</title> 
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+
+h1 {
+  color: rgb(255, 255, 255);
+
+}
+
+p{
+  color: rgb(255, 255, 255);
+  font-size: 1.3em;
+}
+
+body {
+  		background-image: url('https://images.idgesg.net/images/article/2017/09/networking-100735059-large.jpg');
+  		background-size: cover;
+  		text-align:center;
+	}
+</style> 
+<body> 
+
+	<h1>Insert the Barcode of the Product</h1> 
+	<p>(At most 10 integers)</p>
+	
+    <!-- Give Servlet reference to the form as an instances  
+    GET and POST services can be according to the problem statement-->
+    <form action="./CheckMainKey" method="post"> 
+         
+
+        <!-- Create an element with mandatory name attribute, 
+        so that data can be transfer to the servlet using getParameter() -->
+        <input type="text" name="id"/>
+        <br/><br/><br/> 
+
+        <!-- Create an element type submit that is mandatory for the data forwarding -->
+        <input type="submit" value = "Check Barcode"/> 
+        
+    </form> 
+</body> 
+</html> 

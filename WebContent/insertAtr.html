@@ -1,0 +1,42 @@
+
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Insert Product Attributes</title> 
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+h1{
+	color: rgb(255,255,255);
+}
+
+p{
+  color: rgb(255, 255, 255);
+  font-size: 1.3em;
+}
+body {
+  		background-image: url('https://images.idgesg.net/images/article/2017/09/networking-100735059-large.jpg');
+  		background-size: cover;
+  		text-align:center;
+	}
+</style> 
+<body> 
+	<h1>Insert the Attributes of the new Product</h1>
+    <!-- Give Servlet reference to the form as an instances  
+    GET and POST services can be according to the problem statement-->
+    <form action="./InsertAtr" method="post"> 
+        <br/> 
+        <p>Name:</p>  
+        <input type="text" name="string1"/> 
+        <p>Color:</p>  
+        <input type="text" name="string2"/>
+        <p>Description:</p>  
+        <input type="text" name="string3"/>
+        <br/><br/><br/> 
+        <input type="submit" value = "Set Attributes"/> 
+        
+    </form> 
+</body> 
+</html> 
