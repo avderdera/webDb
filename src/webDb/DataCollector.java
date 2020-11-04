@@ -16,29 +16,29 @@ public class DataCollector  {
 				
 					try {
 														
-							// Initialize the database
-							Connection con = DatabaseConnection.initializeDatabase(); 
+						// Initialize the database
+						Connection con = DatabaseConnection.initializeDatabase(); 
         
-							// Create a SQL query to insert data into Products table 
-							PreparedStatement atdb = con.prepareStatement("select * from Products where barcode=?");
+						// Create a SQL query to insert data into Products table 
+						PreparedStatement atdb = con.prepareStatement("select * from Products where barcode=?");
 
-							// Get the barcode value from from initial input
-							CheckMainKey barc = new CheckMainKey();
-							int bar = barc.barcode();
+						// Get the barcode value from from initial input
+						CheckMainKey barc = new CheckMainKey();
+						int bar = barc.barcode();
 							
-							// Get and store to rs data from database
-							atdb.setInt(1, bar);
-							ResultSet rs=atdb.executeQuery(); 
+						// Get and store to rs data from database
+						atdb.setInt(1, bar);
+						ResultSet rs=atdb.executeQuery(); 
 							
-							while(rs.next()){  
-								// Copy data from rs to an arrayList
-								prodList.add(new ArrayAtr(rs.getInt(1),rs.getString(2), rs.getString(3), rs.getString(4)));  
-							}  
+						while(rs.next()){  
+							// Copy data from rs to an arrayList
+							prodList.add(new ArrayAtr(rs.getInt(1),rs.getString(2), rs.getString(3), rs.getString(4)));  
+						}  
 							
-					        atdb.close();
+					    atdb.close();
 					     
-					        // Close all the connections    
-					        con.close(); 
+					    // Close all the connections    
+					    con.close(); 
 					        
 				
 					       
